@@ -18,13 +18,13 @@ if(digitalRead(pir)==HIGH)
   digitalWrite(buzzer,HIGH);
   digitalWrite(led,HIGH);
   delay(2000);
-  Serial.println("Motion detect");
+  Serial.println("Motion detected");
 }
 else
 {
   digitalWrite(buzzer,LOW);
   digitalWrite(led,LOW);
   delay(1000);
-  Serial.println("Motion not detect");
+  Serial.println("Motion not detected");
 }
 }
