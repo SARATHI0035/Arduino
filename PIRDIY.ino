@@ -1,30 +1,38 @@
-const int buzzer=6; //Initialize buzzer pin
-const int led=5; //Initialize led pin
-const int pir=7; //Initialize pir sensor pin
+// Required Components:
+// 1. PIR Motion Sensor - 1 unit (to detect motion)
+// 2. Buzzer - 1 unit (to provide sound alert when motion is detected)
+// 3. LED - 1 unit (to provide visual alert when motion is detected)
+// 4. Arduino Board (e.g., Arduino Uno) - 1 unit
+// 5. Jumper Wires for connections
+// 6. Breadboard (optional for easier wiring)
+// 7. Power Supply (from Arduino or external for buzzer and LED)
+
+const int buzzer = 6;  // Initialize buzzer pin
+const int led = 5;     // Initialize LED pin
+const int pir = 7;     // Initialize PIR sensor pin
+
 void setup() {
-  // put your setup code here, to run once:
-  //setup the connected digital pins
-  pinMode(buzzer,OUTPUT);
-  pinMode(led,OUTPUT);
-  pinMode(pir,INPUT);
-  Serial.begin(9600);
+  // Setup the connected digital pins
+  pinMode(buzzer, OUTPUT);  // Set buzzer as output
+  pinMode(led, OUTPUT);     // Set LED as output
+  pinMode(pir, INPUT);      // Set PIR sensor as input
+
+  Serial.begin(9600);       // Begin serial communication at 9600 baud rate
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  //Make the code if it is high turn on the LED and the BUZZER
-if(digitalRead(pir)==HIGH)
-{
-  digitalWrite(buzzer,HIGH);
-  digitalWrite(led,HIGH);
-  delay(2000);
-  Serial.println("Motion detected");
-}
-else
-{
-  digitalWrite(buzzer,LOW);
-  digitalWrite(led,LOW);
-  delay(1000);
-  Serial.println("Motion not detected");
-}
+  // If motion is detected (PIR sensor goes HIGH), turn on LED and buzzer
+  if (digitalRead(pir) == HIGH) {
+    digitalWrite(buzzer, HIGH);  // Turn on the buzzer
+    digitalWrite(led, HIGH);     // Turn on the LED
+    delay(2000);                 // Wait for 2 seconds
+    Serial.println("Motion detected");  // Print message to the serial monitor
+  } 
+  else {
+    // If no motion is detected, turn off LED and buzzer
+    digitalWrite(buzzer, LOW);   // Turn off the buzzer
+    digitalWrite(led, LOW);      // Turn off the LED
+    delay(1000);                 // Wait for 1 second
+    Serial.println("Motion not detected");  // Print message to the serial monitor
+  }
 }
