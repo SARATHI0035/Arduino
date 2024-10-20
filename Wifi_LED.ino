@@ -1,5 +1,5 @@
 
-#define BLYNK_TEMPLATE_ID "TMPL3FwFZ5UR6"
+#define BLYNK_TEMPLATE_ID "***********"
 #define BLYNK_TEMPLATE_NAME "LED ON OFF"
 #define BLYNK_PRINT Serial
 #include <BlynkSimpleEsp32.h>
