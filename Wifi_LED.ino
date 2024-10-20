@@ -14,8 +14,8 @@
 #define BLYNK_AUTH_TOKEN "zyhJ-cEnpJdLLJpgld3978--zeyB1w6a"  // Enter your Blynk auth token
 
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "SARATHI";  // Enter your WiFi SSID
-char pass[] = "SARATHI0035";         // Enter your WiFi password
+char ssid[] = "";  // Enter your WiFi SSID
+char pass[] = "";  // Enter your WiFi password
 
 // Get the button values from Blynk app for Light 1
 BLYNK_WRITE(V0) {
