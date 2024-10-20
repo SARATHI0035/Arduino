@@ -11,7 +11,7 @@
 #define wifiLed 2  // GPIO for the built-in LED on ESP32
 
 // Blynk authentication token
-#define BLYNK_AUTH_TOKEN "zyhJ-cEnpJdLLJpgld3978--zeyB1w6a"  // Enter your Blynk auth token
+#define BLYNK_AUTH_TOKEN ""  // Enter your Blynk auth token
 
 char auth[] = BLYNK_AUTH_TOKEN;
 char ssid[] = "";  // Enter your WiFi SSID
